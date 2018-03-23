@@ -30,10 +30,7 @@ public class NoteController {
 
     @GetMapping("/notes")
     public List<Note> getAllNotes() {
-    	long start_time = System.currentTimeMillis();
          List<Note> notes = noteRepository.findAll();
-         long end_time = System.currentTimeMillis();
-        System.out.println("Time using jpa repository:"+(end_time-start_time));
         return notes;    
     }
     
