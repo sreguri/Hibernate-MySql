@@ -20,8 +20,8 @@ public class HibernateUtil
 
 		ses.close();
 
-		System.out.println("wwwwwwwwwdffdwww");
-		System.out.println("santu");
+		System.out.println("wwwwweeewwwwdffdwww");
+		System.out.println("santtttttu");
 		
 	}
 
