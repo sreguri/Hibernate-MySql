@@ -19,6 +19,7 @@ public class HibernateUtil
 		if(ses!=null)
 
 		ses.close();
+		System.out.println();
 		
 	}
 

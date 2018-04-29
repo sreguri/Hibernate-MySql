@@ -44,6 +44,7 @@ public class NoteController {
     	List<Note> notes =noteRepository.getNoteById(noteId);
         long end_time = System.currentTimeMillis();
         System.out.println("Time using jpa id query:"+(end_time-start_time));
+        System.out.println("hi");
         return notes;     
     }
     
