@@ -21,7 +21,7 @@ public class HibernateUtil
 		ses.close();
 
 		System.out.println("wwwwwwwwwwww");
-
+		System.out.println("santu");
 		
 	}
 
