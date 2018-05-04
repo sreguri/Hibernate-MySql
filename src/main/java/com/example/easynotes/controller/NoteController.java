@@ -33,6 +33,7 @@ public class NoteController {
     	long start_time = System.currentTimeMillis();
          List<Note> notes = noteRepository.findAll();
          long end_time = System.currentTimeMillis();
+         System.out.println("hi");
         System.out.println("Time using jpa repository:"+(end_time-start_time));
         return notes;    
     }
@@ -53,6 +54,7 @@ public class NoteController {
     	long start_time = System.currentTimeMillis();
     	List<Note> notes =noteRepository.findNotesByHql();
     	long end_time = System.currentTimeMillis();
+    	   System.out.println("hi");
         System.out.println("Time using hql query:"+(end_time-start_time));
         return notes;
     }
@@ -89,10 +91,18 @@ public class NoteController {
     	long start_time = System.currentTimeMillis();
     	List<Note> notes =Native.findNotesByNativeSql();
     	long end_time = System.currentTimeMillis();
+        System.out.println("Time using jpa id query:"+(end_time-start_time));
+        System.out.println("hi");
         System.out.println("Time using Native Sql query:"+(end_time-start_time));
         return notes;
     }
-    
+    public List<Note> getNotwwesByNativeSql(){
+    	long start_time = System.currentTimeMillis();
+    	List<Note> notes =Native.findNotesByNativeSql();
+    	long end_time = System.currentTimeMillis();
+        System.out.println("Time using Native Sql query:"+(end_time-start_time));
+        return notes;
+    }
 
     @PostMapping("/notes")
     public Note createNote(@Valid @RequestBody Note note) {
